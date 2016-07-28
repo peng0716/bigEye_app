@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>详情页面</title>
+    <link rel="stylesheet" href="css/iosSelect.css"/>
+    <link rel="stylesheet" href="css/detail.css"/>
+</head>
+<body>
+<div class="detail">
+    <div class="detailFilter">
+        <ul>
+            <li class="floatLeft filter borderRight">
+                <span class="filter_text">时 间</span>
+                <img class="triangle_img" src="img/triangle_under.png" alt=""/>
+                <ul class="filterNav" style="display: none">
+                    <li>近三个月</li>
+                    <li>近半年</li>
+                </ul>
+            </li>
+            <li class="floatLeft filter">
+                <span class="filter_text">类 型</span>
+                <img class="triangle_img" src="img/triangle_under.png" alt=""/>
+                <ul class="filterNav" style="display: none">
+                    <li>近三个月</li>
+                    <li>近半年</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="detailLayout">
+        <!--图例1-->
+        <div class="detailLegend">
+            <h2 class="legendTitle">折线图展示</h2>
+            <div class="legendFilter">
+                <div class="floatLeft partialFilter">
+                    <span class="condition">筛选条件1</span>
+                    <div class="pc-box filterStyle">
+                        <input type="text" data-index="data1" data-default="10002" class="filterInput" value="点击数据筛选">
+                        <img class="filterImg" src="img/triangle_under.png" />
+                    </div>
+                </div>
+                <div class="floatLeft partialFilter">
+                    <span class="condition">筛选条件2</span>
+                    <div class="pc-box filterStyle">
+                        <input type="text" data-index="data2" class="filterInput" data-default="10003" value="点击数据筛选">
+                        <img class="filterImg" src="img/triangle_under.png" />
+                    </div>
+                </div>
+                <button type="button" class="partialButton">确 定</button>
+            </div>
+            <div id="legendLine" class="legendLine"></div>
+        </div>
+        <!--图例2-->
+        <div class="detailLegend">
+            <h2 class="legendTitle">柱状图展示</h2>
+            <div class="legendFilter">
+                <div class="floatLeft partialFilter">
+                    <span class="condition">筛选条件1</span>
+                    <div class="pc-box filterStyle">
+                        <input type="text" name="bank_id" class="filterInput" value="点击数据筛选">
+                        <img class="filterImg" src="img/triangle_under.png" />
+                    </div>
+                </div>
+                <div class="floatLeft partialFilter">
+                    <span class="condition">筛选条件2</span>
+                    <div class="pc-box filterStyle">
+                        <input type="text" name="bank_id" class="filterInput" value="点击数据筛选">
+                        <img class="filterImg" src="img/triangle_under.png" />
+                    </div>
+                </div>
+                <button type="button" class="partialButton">确 定</button>
+            </div>
+            <div id="legendBar" class="legendLine"></div>
+        </div>
+        <!--图例3-->
+        <div class="detailLegend">
+            <h2 class="legendTitle">折线图展示</h2>
+            <div class="legendFilter">
+                <div class="floatLeft partialFilter">
+                    <span class="condition">筛选条件1</span>
+                    <div class="pc-box filterStyle">
+                        <input type="text" name="bank_id" class="filterInput" value="点击数据筛选">
+                        <img class="filterImg" src="img/triangle_under.png" />
+                    </div>
+                </div>
+                <div class="floatLeft partialFilter">
+                    <span class="condition">筛选条件2</span>
+                    <div class="pc-box filterStyle">
+                        <input type="text" name="bank_id" class="filterInput" value="点击数据筛选">
+                        <img class="filterImg" src="img/triangle_under.png" />
+                    </div>
+                </div>
+                <button type="button" class="partialButton">确 定</button>
+            </div>
+            <div id="legendGraph" class="legendLine"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/iosSelect.js"></script>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/detail.js"></script>
+</body>
+</html>
