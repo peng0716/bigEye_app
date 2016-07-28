@@ -79,29 +79,42 @@ $(function(){
 var legendLine = echarts.init(document.getElementById('legendLine'));
 option = {
     title: {
-        text: '堆叠区域图'
+        text: '堆叠区域图',
+        textStyle:{
+            fontSize:10,
+        }
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
-        top:20,
+        top:28,
+        right:0,
+        itemWidth:4,
+        itemHeight:4,
+        textStyle:{
+            fontSize:6,
+        },
         data:['邮件营销','视频广告','直接访问','搜索引擎']
     },
     toolbox: {
+        itemSize:12,
         feature: {
             saveAsImage: {}
         }
     },
     grid: {
-        left: '3%',
+        left: '1%',
         right: '4%',
-        bottom: '3%',
+        bottom: '2%',
         containLabel: true
     },
     xAxis : [
         {
             type : 'category',
+            nameTextStyle:{
+                fontSize:10,
+            },
             boundaryGap : false,
             data : ['周一','周二','周三','周四','周五','周六','周日']
         }
@@ -265,16 +278,11 @@ dataMap.dataFinancial = dataFormatter({
 option = {
     baseOption: {
         timeline: {
-            // y: 0,
+            left:0,
+            right:0,
             axisType: 'category',
-            // realtime: false,
-            // loop: false,
             autoPlay: true,
-            // currentIndex: 2,
             playInterval: 1000,
-            // controlStyle: {
-            //     position: 'left'
-            // },
             data: [
                 '2002-01-01','2003-01-01','2004-01-01',
                 {
@@ -294,7 +302,7 @@ option = {
                         }
                     },
                     symbol: 'diamond',
-                    symbolSize: 18
+                    symbolSize: 12
                 },
             ],
             label: {
@@ -304,11 +312,20 @@ option = {
             }
         },
         title: {
-            subtext: '数据来自国家统计局'
+            subtext: '数据来自国家统计局',
+            padding:[0,0],
+            subtextStyle:{
+                fontSize:10,
+            }
         },
         tooltip: {},
         legend: {
             x: 'right',
+            itemWidth:6,
+            itemHeight:4,
+            textStyle:{
+                fontSize:10,
+            },
             data: ['第一产业', '第二产业', '第三产业'],
             selected: {
                 'GDP': false, '金融': false, '房地产': false
@@ -316,8 +333,10 @@ option = {
         },
         calculable : true,
         grid: {
-            top: 80,
-            bottom: 100
+            top: 70,
+            bottom: 100,
+            left: '16%',
+            right: '3%',
         },
         xAxis: [
             {
@@ -336,7 +355,9 @@ option = {
             {
                 type: 'value',
                 name: 'GDP（亿元）',
-                // max: 53500
+                nameTextStyle:{
+                    fontSize:6,
+                },
                 max: 30000
             }
         ],
@@ -350,14 +371,32 @@ option = {
             {
                 name: 'GDP占比',
                 type: 'pie',
-                center: ['75%', '35%'],
-                radius: '28%'
+                center: ['73%', '35%'],
+                radius: '25%',
+                label:{
+                    normal:{
+                        textStyle:{
+                            fontSize:10,
+                        }
+                    },
+                },
+                labelLine:{
+                    normal:{
+                        length:5,
+                        length2:5,
+                    },
+                },
             }
         ]
     },
     options: [
         {
-            title: {text: '2002全国宏观经济指标'},
+            title: {
+                text: '2002全国宏观经济指标',
+                textStyle:{
+                    fontSize:10,
+                }
+            },
             series: [
                 {data: dataMap.dataGDP['2002']},
                 {data: dataMap.dataFinancial['2002']},

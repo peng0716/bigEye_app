@@ -33,21 +33,21 @@ ul,li{
     left:0;
     z-index: 999;
     width:100%;
-    height: 80px;
+    height: 40px;
     background-color: #fff;
 }
 .filter{
-    padding:24px 0;
+    padding:12px 0;
     width:49.8%;
-    height: 32px;
-    line-height: 32px;
+    height: 16px;
+    line-height: 16px;
     text-align: center;
 }
 .filter_text{
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 .triangle_img{
-    margin:0 12px;
+    margin:0 6px;
 }
 .triangle180{
     transform:rotate(180deg);
@@ -58,73 +58,72 @@ ul,li{
 }
 .filterNav{
     position: absolute;
-    top:80px;
-    width: 49.9%;
+    top:40px;
+    width: 49.8%;
     background-color:#fff;
 }
 .filterNav > li{
-    padding-left:18%;
-    height: 80px;
-    line-height: 80px;
-    font-size: 2rem;
+    padding-left:34%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
     text-align: left;
     border-top:1px solid #e3e3e3;
 }
 
 .detailLayout{
     position: absolute;
-    top:80px;
+    top:40px;
     width:100%;
     background-color:#f2f2f2;
     overflow:scroll;
 }
 .detailLegend{
-    margin-top:20px;
-    padding:30px;
-    height: 600px;
+    margin-top:10px;
+    padding:15px;
     background-color: #fff;
 }
 .legendTitle{
-    font-size: 2rem;
+    font-size: 1.1rem;
     font-weight: 100;
 }
 .legendFilter{
-    margin:30px 0;
-    height: 50px;
+    margin:15px 0;
+    height: 26px;
 }
 .partialFilter{
-    margin-right:30px;
-    width:40%;
-    height: 50px;
-    line-height: 50px;
+    margin-right:15px;
+    width:39%;
+    height: 26px;
+    line-height: 26px;
 }
 .condition{
-    margin-right:14px;
-    font-size: 1.4rem;
+    margin-right:5px;
+    font-size: 0.9rem;
 }
 .filterStyle{
     display: inline-block;
     position: relative;
 }
 .filterInput{
-    padding-right:10px;
-    height: 48px;
-    font-size: 20px;
-    color:#aaa;
+    padding-right:5px;
+    width:80px;
+    height: 24px;
+    font-size: 0.8rem;
     text-align: center;
     border:1px solid #dedede;
 }
 .filterImg{
     position: absolute;
-    top:20px;
-    right:10px;
+    top:10px;
+    right:5px;
 }
 
 .partialButton{
     width:13%;
-    height: 50px;
+    height: 26px;
     color:#fff;
-    font-size: 20px;
+    font-size: 0.6rem;
     border-radius:5px;
     border:none;
     outline:none;
@@ -132,5 +131,8 @@ ul,li{
 }
 .legendLine{
     width:100%;
-    height:455px;
+    height:230px;
+}
+.legendBar{
+    height: 300px;
 }
