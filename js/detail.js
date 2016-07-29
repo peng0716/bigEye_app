@@ -165,6 +165,9 @@ option = {
         {
             type : 'value',
             name:'单位：万',
+            nameTextStyle:{
+                fontSize:8,
+            },
         }
     ],
     series : [
