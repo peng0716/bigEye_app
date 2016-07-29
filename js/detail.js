@@ -134,7 +134,7 @@ option = {
         itemWidth:10,
         itemHeight:10,
         textStyle:{
-            fontSize:12,
+            fontSize:10,
         },
         data:['邮件营销','视频广告','直接访问','搜索引擎']
     },
@@ -351,7 +351,7 @@ option = {
             itemWidth:10,
             itemHeight:8,
             textStyle:{
-                fontSize:12,
+                fontSize:10,
             },
             data: ['第一产业', '第二产业', '第三产业'],
             selected: {
@@ -382,7 +382,7 @@ option = {
                 type: 'value',
                 name: 'GDP（亿元）',
                 nameTextStyle:{
-                    fontSize:6,
+                    fontSize:8,
                 },
                 max: 30000
             }
