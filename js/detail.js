@@ -131,7 +131,7 @@ option = {
     legend: {
         top:28,
         right:0,
-        itemWidth:10,
+        itemWidth:12,
         itemHeight:10,
         textStyle:{
             fontSize:10,
@@ -349,7 +349,7 @@ option = {
             top:10,
             x: 'right',
             itemWidth:10,
-            itemHeight:8,
+            itemHeight:10,
             textStyle:{
                 fontSize:10,
             },
