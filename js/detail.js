@@ -30,7 +30,7 @@ $(function(){
         })
     })
     /*局部筛选*/
-    $('.filterStyle > input').each(function(){
+    $('.filterStyle > p').each(function(){
         $(this).click(function(){
             var dataIndex = $(this).attr('data-index');
             $('.theme-popover-mask').fadeIn(100);
@@ -46,6 +46,7 @@ $(function(){
                     oneLevelId: oneLevelId,
                     callback: function (selectOneObj) {
                         showBankDom.context.value = selectOneObj.value;
+                        showBankDom.context.innerHTML = selectOneObj.value;
                         showBankDom.context.dataset['id'] = selectOneObj.id;
                         showBankDom.context.dataset['value'] = selectOneObj.value;
                         showBankDom.attr('data-default', selectOneObj.id);
@@ -78,10 +79,11 @@ $(function(){
 /*折线图*/
 var legendLine = echarts.init(document.getElementById('legendLine'));
 option = {
+    padding:5,
     title: {
         text: '堆叠区域图',
         textStyle:{
-            fontSize:10,
+            fontSize:12,
         }
     },
     tooltip : {
@@ -90,19 +92,20 @@ option = {
     legend: {
         top:28,
         right:0,
-        itemWidth:4,
-        itemHeight:4,
+        itemWidth:6,
+        itemHeight:6,
         textStyle:{
-            fontSize:6,
+            fontSize:8,
         },
         data:['邮件营销','视频广告','直接访问','搜索引擎']
     },
     toolbox: {
-        itemSize:12,
+        itemSize:14,
         feature: {
             saveAsImage: {}
         }
     },
+    smooth:true,
     grid: {
         left: '1%',
         right: '4%',

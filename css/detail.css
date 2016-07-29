@@ -1,4 +1,4 @@
-html,body,div,ul,li,h2,img,a,span,select,option,button,input{
+html,body,div,ul,li,h2,img,a,span,select,option,button,input,p{
     margin:0;
     padding:0;
     font-size: 12px;
@@ -61,6 +61,8 @@ ul,li{
     top:40px;
     width: 49.8%;
     background-color:#fff;
+    border-bottom:1px solid #e3e3e3;
+    border-right:1px solid #e3e3e3;
 }
 .filterNav > li{
     padding-left:34%;
@@ -92,26 +94,32 @@ ul,li{
     height: 26px;
 }
 .partialFilter{
-    margin-right:15px;
-    width:39%;
+    margin-right:10px;
+    width:40%;
     height: 26px;
     line-height: 26px;
 }
 .condition{
-    margin-right:5px;
-    font-size: 0.9rem;
+    display: inline-block;
+    margin-right:4px;
+    font-size: 0.8rem;
 }
 .filterStyle{
     display: inline-block;
     position: relative;
+    width:68%;
+    height: 26px;
+    line-height: 26px;
 }
-.filterInput{
+.filterP{
+    display: inline-block;
     padding-right:5px;
-    width:80px;
+    width:95%;
     height: 24px;
+    line-height: 24px;
     font-size: 0.8rem;
     text-align: center;
-    border:1px solid #dedede;
+    border:1px solid #e3e3e3;
 }
 .filterImg{
     position: absolute;
@@ -123,7 +131,7 @@ ul,li{
     width:13%;
     height: 26px;
     color:#fff;
-    font-size: 0.6rem;
+    font-size: .9rem;
     border-radius:5px;
     border:none;
     outline:none;
