@@ -1,5 +1,5 @@
 
-var data = {
+var dataXQ = {
     data1:[
         {'id': '10001', 'value': '星期一'},
         {'id': '10002', 'value': '星期二'},
@@ -79,7 +79,7 @@ $(function(){
             var oneLevelId = showBankDom.attr('data-default');
 
             var bankSelect = new IosSelect(1,
-                [data[dataIndex]],
+                [dataXQ[dataIndex]],
                 {
                     itemHeight: 50,
                     oneLevelId: oneLevelId,
@@ -96,19 +96,6 @@ $(function(){
         })
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -914,6 +901,13 @@ var convertedData = [
     }).slice(0, 6))
 ];
 var myChart = echarts.init(document.getElementById('myChart'))
+/*$(function(){
+    var myChart90 = $('#myChart div:first');
+    myChart90.addClass('triangle90');
+    var width90 = myChart90.css('width');
+    var height90 = myChart90.css('height');
+    myChart90.css('width',height90).css('height',width90);
+})*/
 option = {
     backgroundColor: '#404a59',
     animation: true,
@@ -1149,3 +1143,14 @@ function renderBrushed(params) {
         }
     });
 }
+
+/*横屏竖屏*/
+function orientInit(){
+    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
+    if(orientChk =='lapdscape'){
+        location.reload();
+    }else{
+        location.reload();
+    }
+}
+

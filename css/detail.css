@@ -145,3 +145,13 @@ ul,li{
 .legendBar{
     height: 300px;
 }
+.triangle90{
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); /* Internet Explorer */
+    -moz-transform:rotate(90deg); /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari ºÍ Chrome */
+    -o-transform:rotate(90deg); /* Opera */
+}
+.legendMap{
+    height: 600px;
+}
