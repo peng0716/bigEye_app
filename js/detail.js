@@ -96,10 +96,9 @@ $(function(){
                     }
                 }
             );
+            /*横屏处理*/
             var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
             if(orientChk =='landscape'){
-                /*$('.layer header').addClass('screen');
-                console.log($('.layer header'));*/
                 $('.layer').css('height','100%');
             }
             $('#iosSelectTitle').text(titleText);
