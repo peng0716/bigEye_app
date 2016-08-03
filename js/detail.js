@@ -113,9 +113,6 @@ $(function(){
 
 /*折线图*/
 var legendLine = echarts.init(document.getElementById('legendLine'));
-/*legendLine.showLoading({
-    text : "图表数据正在努力加载..."
-});*/
 option = {
     padding:5,
     title: {
@@ -217,12 +214,9 @@ option = {
     ]
 };
 legendLine.setOption(option);
-/*legendLine.hideLoading();*/
+
 /*柱状图 - 饼图*/
 var legendBar = echarts.init(document.getElementById('legendBar'));
-/*legendBar.showLoading({
-    text : "图表数据正在努力加载..."
-});*/
 var dataMap = {};
 function dataFormatter(obj) {
     var pList = ['北京','天津','河北','山西','内蒙古','辽宁','吉林','黑龙江','上海','江苏','浙江','安徽','福建','江西','山东','河南','湖北','湖南','广东'];
@@ -510,7 +504,7 @@ option = {
     ]
 };
 legendBar.setOption(option);
-/*legendBar.hideLoading();*/
+
 /*地图*/
 var geoCoordMap = {
     "海门":[121.15,31.89],
@@ -916,9 +910,13 @@ var convertedData = [
     }).slice(0, 6))
 ];
 var myChart = echarts.init(document.getElementById('myChart'))
-/*myChart.showLoading({
-    text : "图表数据正在努力加载..."
-});*/
+/*$(function(){
+    var myChart90 = $('#myChart div:first');
+    myChart90.addClass('triangle90');
+    var width90 = myChart90.css('width');
+    var height90 = myChart90.css('height');
+    myChart90.css('width',height90).css('height',width90);
+})*/
 option = {
     backgroundColor: '#404a59',
     animation: true,
@@ -1090,7 +1088,6 @@ option = {
     ]
 };
 myChart.setOption(option);
-/*myChart.hideLoading();*/
 myChart.on('brushselected', renderBrushed);
 
 // myChart.setOption(option);
