@@ -97,10 +97,10 @@ $(function(){
                 }
             );
             /*横屏处理*/
-            var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
+            /*var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
             if(orientChk =='landscape'){
                 $('.layer').css('height','100%');
-            }
+            }*/
             $('#iosSelectTitle').text(titleText);
         })
     });
@@ -910,13 +910,7 @@ var convertedData = [
     }).slice(0, 6))
 ];
 var myChart = echarts.init(document.getElementById('myChart'))
-/*$(function(){
-    var myChart90 = $('#myChart div:first');
-    myChart90.addClass('triangle90');
-    var width90 = myChart90.css('width');
-    var height90 = myChart90.css('height');
-    myChart90.css('width',height90).css('height',width90);
-})*/
+
 option = {
     backgroundColor: '#404a59',
     animation: true,
@@ -1152,18 +1146,3 @@ function renderBrushed(params) {
         }
     });
 }
-
-/*横屏竖屏*/
-/*window.addEventListener("orientationchange", function() {
-    orientInit();
-});
-function orientInit(){
-    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
-    if(orientChk =='landscape'){
-        location.reload();
-        $('.layer header').addClass('screen');
-        console.log($('.layer header'));
-    }else{
-        location.reload();
-    }
-}*/
