@@ -1145,6 +1145,7 @@ function renderBrushed(params) {
 }
 
 /*横屏竖屏*/
+
 function orientInit(){
     var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
     if(orientChk =='lapdscape'){
@@ -1153,4 +1154,6 @@ function orientInit(){
         location.reload();
     }
 }
-
+window.addEventListener("orientationchange", function() {
+    orientInit();
+}, false);
