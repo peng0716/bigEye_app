@@ -54,6 +54,10 @@ var dataXQ = {
     ],
 }
 $(function(){
+    /*横屏竖屏*/
+    window.addEventListener("orientationchange", function() {
+        location.reload();
+    });
     /*全局筛选*/
     $('.filter').click(function(){
         if(!$(this).children('img').hasClass('triangle180')){
@@ -92,6 +96,12 @@ $(function(){
                     }
                 }
             );
+            var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
+            if(orientChk =='landscape'){
+                /*$('.layer header').addClass('screen');
+                console.log($('.layer header'));*/
+                $('.layer').css('height','100%');
+            }
             $('#iosSelectTitle').text(titleText);
         })
     });
@@ -1145,18 +1155,16 @@ function renderBrushed(params) {
 }
 
 /*横屏竖屏*/
-
+/*window.addEventListener("orientationchange", function() {
+    orientInit();
+});
 function orientInit(){
     var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
-    if(orientChk =='landscape'){    //landscape   lapdscape
+    if(orientChk =='landscape'){
         location.reload();
         $('.layer header').addClass('screen');
         console.log($('.layer header'));
     }else{
         location.reload();
-
     }
-}
-window.addEventListener("orientationchange", function() {
-    orientInit();
-});
+}*/
