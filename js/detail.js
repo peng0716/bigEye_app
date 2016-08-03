@@ -216,14 +216,16 @@ var optionLine = {
 legendLine.showLoading({
     text : "图表数据正在努力加载..."
 });
-legendLine.setOption(optionLine);
 legendLine.hideLoading();
+legendLine.setOption(optionLine);
+
 
 /*柱状图 - 饼图*/
 var legendBar = echarts.init(document.getElementById('legendBar'));
 legendBar.showLoading({
     text : "图表数据正在努力加载..."
 });
+legendBar.hideLoading();
 var dataMap = {};
 function dataFormatter(obj) {
     var pList = ['北京','天津','河北','山西','内蒙古','辽宁','吉林','黑龙江','上海','江苏','浙江','安徽','福建','江西','山东','河南','湖北','湖南','广东'];
@@ -510,7 +512,6 @@ var optionBar = {
         },
     ]
 };
-legendBar.hideLoading();
 legendBar.setOption(optionBar);
 
 
