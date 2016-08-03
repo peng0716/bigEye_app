@@ -216,8 +216,9 @@ var optionLine = {
         }
     ]
 };
-legendLine.setOption(optionLine);
 legendLine.hideLoading();
+legendLine.setOption(optionLine);
+
 /*柱状图 - 饼图*/
 var legendBar = echarts.init(document.getElementById('legendBar'));
 legendBar.showLoading({
@@ -509,8 +510,9 @@ var optionBar = {
         },
     ]
 };
-legendBar.setOption(optionBar);
 legendBar.hideLoading();
+legendBar.setOption(optionBar);
+
 
 /*地图*/
 var geoCoordMap = {
@@ -1090,8 +1092,8 @@ var optionMap = {
         }
     ]
 };
-myChart.setOption(optionMap);
 myChart.hideLoading();
+myChart.setOption(optionMap);
 myChart.on('brushselected', renderBrushed);
 
 // myChart.setOption(option);
