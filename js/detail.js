@@ -113,7 +113,7 @@ $(function(){
 
 /*折线图*/
 var legendLine = echarts.init(document.getElementById('legendLine'));
-var optionLine = {
+optionLine = {
     padding:5,
     title: {
         text: '堆叠区域图',
@@ -293,7 +293,7 @@ dataMap.dataFinancial = dataFormatter({
     2005:[840.2,147.4,213.47,135.07,72.52,232.85,83.63,35.03,675.12,492.4,686.32,127.05,186.12,69.55,448.36,181.74,127.32],
     2004:[713.79,136.97,209.1,110.29,55.89,188.04,77.17,32.2,612.45,440.5,523.49,94.1,171,65.1,343.37,],
 });
-var optionBar = {
+optionBar = {
     baseOption: {
         timeline: {
             left:0,
@@ -912,7 +912,7 @@ var convertedData = [
     }).slice(0, 6))
 ];
 var myChart = echarts.init(document.getElementById('myChart'))
-var optionMap = {
+optionMap = {
     backgroundColor: '#404a59',
     animation: true,
     animationDuration: 1000,
