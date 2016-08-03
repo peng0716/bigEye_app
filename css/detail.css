@@ -155,3 +155,9 @@ ul,li{
 .legendMap{
     height: 600px;
 }
+
+/*∫·∆¡*/
+.screen{
+    position: fixed;
+    bottom: 0px;
+}

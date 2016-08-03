@@ -1148,12 +1148,15 @@ function renderBrushed(params) {
 
 function orientInit(){
     var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
-    if(orientChk =='lapdscape'){
+    if(orientChk =='landscape'){    //landscape   lapdscape
         location.reload();
+        $('.layer header').addClass('screen');
+        console.log($('.layer header'));
     }else{
         location.reload();
+
     }
 }
 window.addEventListener("orientationchange", function() {
     orientInit();
-}, false);
+});
