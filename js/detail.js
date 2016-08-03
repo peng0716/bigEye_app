@@ -113,9 +113,6 @@ $(function(){
 
 /*折线图*/
 var legendLine = echarts.init(document.getElementById('legendLine'));
-legendLine.showLoading({
-    text : "图表数据正在努力加载..."
-});
 var optionLine = {
     padding:5,
     title: {
@@ -216,8 +213,11 @@ var optionLine = {
         }
     ]
 };
-legendLine.hideLoading();
+legendLine.showLoading({
+    text : "图表数据正在努力加载..."
+});
 legendLine.setOption(optionLine);
+legendLine.hideLoading();
 
 /*柱状图 - 饼图*/
 var legendBar = echarts.init(document.getElementById('legendBar'));
