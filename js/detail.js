@@ -97,23 +97,19 @@ $(function(){
                 }
             );
             /*横屏处理*/
-            /*var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
+            var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
             if(orientChk =='landscape'){
                 $('.layer').css('height','100%');
-            }*/
+            }
             $('#iosSelectTitle').text(titleText);
         })
     });
 });
 
 
-
-
-
-
 /*折线图*/
 var legendLine = echarts.init(document.getElementById('legendLine'));
-option = {
+var option1 = {
     padding:5,
     title: {
         text: '堆叠区域图',
@@ -213,7 +209,7 @@ option = {
         }
     ]
 };
-legendLine.setOption(option);
+legendLine.setOption(option1);
 
 /*柱状图 - 饼图*/
 var legendBar = echarts.init(document.getElementById('legendBar'));
@@ -292,7 +288,7 @@ dataMap.dataFinancial = dataFormatter({
     2005:[840.2,147.4,213.47,135.07,72.52,232.85,83.63,35.03,675.12,492.4,686.32,127.05,186.12,69.55,448.36,181.74,127.32],
     2004:[713.79,136.97,209.1,110.29,55.89,188.04,77.17,32.2,612.45,440.5,523.49,94.1,171,65.1,343.37,],
 });
-option = {
+var option2 = {
     baseOption: {
         timeline: {
             left:0,
@@ -503,7 +499,7 @@ option = {
         },
     ]
 };
-legendBar.setOption(option);
+legendBar.setOption(option2);
 
 /*地图*/
 var geoCoordMap = {
@@ -910,8 +906,7 @@ var convertedData = [
     }).slice(0, 6))
 ];
 var myChart = echarts.init(document.getElementById('myChart'))
-
-option = {
+var option3 = {
     backgroundColor: '#404a59',
     animation: true,
     animationDuration: 1000,
@@ -1081,7 +1076,7 @@ option = {
         }
     ]
 };
-myChart.setOption(option);
+myChart.setOption(option3);
 myChart.on('brushselected', renderBrushed);
 
 // myChart.setOption(option);
@@ -1146,3 +1141,18 @@ function renderBrushed(params) {
         }
     });
 }
+
+/*横屏竖屏*/
+/*window.addEventListener("orientationchange", function() {
+    orientInit();
+});
+function orientInit(){
+    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';
+    if(orientChk =='landscape'){
+        location.reload();
+        $('.layer header').addClass('screen');
+        console.log($('.layer header'));
+    }else{
+        location.reload();
+    }
+}*/
