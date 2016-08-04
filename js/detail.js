@@ -78,7 +78,7 @@ $(function(){
     })
     /*局部筛选*/
     $('.filterStyle > p').each(function(){
-        $(this).click(function(){
+        $(this).on('touchstart',function(){
             var dataIndex = $(this).attr('data-index');
             $('.theme-popover-mask').fadeIn(100);
             $('.theme-popover').slideDown(200);
