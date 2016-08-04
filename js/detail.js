@@ -59,7 +59,7 @@ $(function(){
         location.reload();
     });
     /*全局筛选*/
-    $('.filter').click(function(){
+    $('.filter').touchstart(function(){
         if(!$(this).find('img').hasClass('triangle180')){
             $('.filter > img').removeClass('triangle180').next('ul').css('display','none');
             $(this).find('img').addClass('triangle180').next('ul').css('display','block');
@@ -70,7 +70,7 @@ $(function(){
         }
     })
     $('.filterNav > li').each(function(){
-        $(this).click(function(){
+        $(this).touchstart(function(){
             var text1 = $(this).text();
             $(this).parent('ul').prevAll('span').html(text1);
             $('.filterBg').css('display','none');
@@ -78,7 +78,7 @@ $(function(){
     })
     /*局部筛选*/
     $('.filterStyle > p').each(function(){
-        $(this).click(function(){
+        $(this).touchstart(function(){
             var dataIndex = $(this).attr('data-index');
             $('.theme-popover-mask').fadeIn(100);
             $('.theme-popover').slideDown(200);
