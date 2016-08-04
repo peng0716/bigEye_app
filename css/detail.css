@@ -149,6 +149,8 @@ ul,li{
     outline:none;
     background-color:#2C98F3;
 }
+
+/*Í¼Àý´óÐ¡*/
 .legendLine{
     width:100%;
     height:230px;
@@ -156,19 +158,7 @@ ul,li{
 .legendBar{
     height: 300px;
 }
-.triangle90{
-    transform:rotate(90deg);
-    -ms-transform:rotate(90deg); /* Internet Explorer */
-    -moz-transform:rotate(90deg); /* Firefox */
-    -webkit-transform:rotate(90deg); /* Safari ºÍ Chrome */
-    -o-transform:rotate(90deg); /* Opera */
-}
 .legendMap{
     height: 600px;
 }
 
-/*ºáÆÁ*/
-.screen{
-    position: fixed;
-    bottom: 0px;
-}

@@ -30,7 +30,7 @@
         </ul>
     </div>
     <div class="detailLayout">
-        <!--图例1-->
+        <!--图例-折线图-->
         <div class="detailLegend">
             <h2 class="legendTitle">折线图展示</h2>
             <div class="legendFilter">
@@ -52,7 +52,29 @@
             </div>
             <div id="legendLine" class="legendLine"></div>
         </div>
-        <!--图例2-->
+        <!--图例-折线图-->
+        <div class="detailLegend">
+            <h2 class="legendTitle">折线图展示</h2>
+            <div class="legendFilter">
+                <div class="floatLeft partialFilter">
+                    <span class=" floatLeft condition">筛选1</span>
+                    <div class="floatLeft pc-box filterStyle">
+                        <p class="filterP" data-index="data1" data-default="10004">数据筛选</p>
+                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                    </div>
+                </div>
+                <div class="floatLeft partialFilter">
+                    <span class="floatLeft condition">筛选2</span>
+                    <div class=" floatLeft pc-box filterStyle">
+                        <p class="filterP" data-index="data2" data-default="10004">数据筛选</p>
+                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                    </div>
+                </div>
+                <button type="button" class="partialButton">确 定</button>
+            </div>
+            <div id="legendLine" class="legendLine"></div>
+        </div>
+        <!--图例-柱状图和饼图-->
         <div class="detailLegend">
             <h2 class="legendTitle">柱状图展示</h2>
             <div class="legendFilter">
@@ -74,7 +96,7 @@
             </div>
             <div id="legendBar" class="legendLine legendBar"></div>
         </div>
-        <!--图例3-->
+        <!--图例中国地图-->
         <div class="detailLegend">
             <h2 class="legendTitle">地图展示</h2>
             <div class="legendFilter">
@@ -102,6 +124,7 @@
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="js/iosSelect.js"></script>
 <script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/detail.js"></script>
 </body>
 </html>
