@@ -60,16 +60,20 @@ $(function(){
     });
     /*全局筛选*/
     $('.filter').click(function(){
-        if(!$(this).children('img').hasClass('triangle180')){
-            $(this).children('img').addClass('triangle180').next('ul').css('display','block');
+        if(!$(this).find('img').hasClass('triangle180')){
+            $('.filter > img').removeClass('triangle180').next('ul').css('display','none');
+            $(this).find('img').addClass('triangle180').next('ul').css('display','block');
+            $('.filterBg').css('display','block');
         }else{
-            $(this).children('img').removeClass('triangle180').next('ul').css('display','none')
+            $(this).find('img').removeClass('triangle180').next('ul').css('display','none');
+            $('.filterBg').css('display','none');
         }
     })
     $('.filterNav > li').each(function(){
         $(this).click(function(){
             var text1 = $(this).text();
             $(this).parent('ul').prevAll('span').html(text1);
+            $('.filterBg').css('display','none');
         })
     })
     /*局部筛选*/
@@ -913,7 +917,8 @@ var convertedData = [
         return b.value - a.value;
     }).slice(0, 6))
 ];
-var myChart = echarts.init(document.getElementById('myChart'))
+var myChart = echarts.init(document.getElementById('myChart'));
+
 myChart.showLoading({
     text:'正在努力加载中...'
 })
