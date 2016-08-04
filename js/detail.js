@@ -109,6 +109,9 @@ $(function(){
 
 /*折线图*/
 var legendLine = echarts.init(document.getElementById('legendLine'));
+legendLine.showLoading({
+    text:'正在努力加载中...'
+})
 var option1 = {
     padding:5,
     title: {
@@ -210,6 +213,7 @@ var option1 = {
     ]
 };
 legendLine.setOption(option1);
+legendLine.hideLoading();
 
 /*柱状图 - 饼图*/
 var legendBar = echarts.init(document.getElementById('legendBar'));
