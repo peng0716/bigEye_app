@@ -67,7 +67,7 @@ var option1 = {
     title: {
         text: '堆叠区域图',
         textStyle:{
-            fontSize:1 + 'rem',
+            fontSize:2 + 'rem',
         }
     },
     tooltip : {
