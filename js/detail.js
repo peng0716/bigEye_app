@@ -59,7 +59,7 @@ $(function(){
         location.reload();
     });
     /*全局筛选*/
-    $('.filter').touchstart(function(){
+    $('.filter').on('touchstart',function(){
         if(!$(this).find('img').hasClass('triangle180')){
             $('.filter > img').removeClass('triangle180').next('ul').css('display','none');
             $(this).find('img').addClass('triangle180').next('ul').css('display','block');
@@ -70,15 +70,32 @@ $(function(){
         }
     })
     $('.filterNav > li').each(function(){
-        $(this).touchstart(function(){
+        $(this).on('touchstart',function(){
             var text1 = $(this).text();
             $(this).parent('ul').prevAll('span').html(text1);
             $('.filterBg').css('display','none');
         })
     })
+    /*$('.filter').click(function(){
+        if(!$(this).find('img').hasClass('triangle180')){
+            $('.filter > img').removeClass('triangle180').next('ul').css('display','none');
+            $(this).find('img').addClass('triangle180').next('ul').css('display','block');
+            $('.filterBg').css('display','block');
+        }else{
+            $(this).find('img').removeClass('triangle180').next('ul').css('display','none');
+            $('.filterBg').css('display','none');
+        }
+    })
+    $('.filterNav > li').each(function(){
+        $(this).click(function(){
+            var text1 = $(this).text();
+            $(this).parent('ul').prevAll('span').html(text1);
+            $('.filterBg').css('display','none');
+        })
+    })*/
     /*局部筛选*/
     $('.filterStyle > p').each(function(){
-        $(this).touchstart(function(){
+        $(this).on('touchstart',function(){
             var dataIndex = $(this).attr('data-index');
             $('.theme-popover-mask').fadeIn(100);
             $('.theme-popover').slideDown(200);
