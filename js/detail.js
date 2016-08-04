@@ -217,6 +217,9 @@ legendLine.hideLoading();
 
 /*柱状图 - 饼图*/
 var legendBar = echarts.init(document.getElementById('legendBar'));
+legendBar.showLoading({
+    text:'正在努力加载中...'
+})
 var dataMap = {};
 function dataFormatter(obj) {
     var pList = ['北京','天津','河北','山西','内蒙古','辽宁','吉林','黑龙江','上海','江苏','浙江','安徽','福建','江西','山东','河南','湖北','湖南','广东'];
@@ -504,6 +507,7 @@ var option2 = {
     ]
 };
 legendBar.setOption(option2);
+legendBar.hideLoading();
 
 /*地图*/
 var geoCoordMap = {
@@ -910,6 +914,9 @@ var convertedData = [
     }).slice(0, 6))
 ];
 var myChart = echarts.init(document.getElementById('myChart'))
+myChart.showLoading({
+    text:'正在努力加载中...'
+})
 var option3 = {
     backgroundColor: '#404a59',
     animation: true,
@@ -1081,6 +1088,8 @@ var option3 = {
     ]
 };
 myChart.setOption(option3);
+myChart.hideLoading();
+
 myChart.on('brushselected', renderBrushed);
 
 // myChart.setOption(option);
