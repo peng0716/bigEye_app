@@ -67,7 +67,7 @@ var option1 = {
     title: {
         text: '堆叠区域图',
         textStyle:{
-            fontSize:2 + 'rem',
+            fontSize:3 + 'rem',
         }
     },
     tooltip : {
@@ -79,7 +79,7 @@ var option1 = {
         itemWidth:10,
         itemHeight:8,
         textStyle:{
-            fontSize:1 + 'rem',
+            fontSize:5 + 'rem',
         },
         data:['邮件营销','视频广告','直接访问','搜索引擎']
     },
