@@ -79,7 +79,7 @@ var option1 = {
         itemWidth:10,
         itemHeight:8,
         textStyle:{
-            fontSize:9,
+            fontSize:1 + 'rem',
         },
         data:['邮件营销','视频广告','直接访问','搜索引擎']
     },
