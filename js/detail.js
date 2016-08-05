@@ -67,7 +67,7 @@ var option1 = {
     title: {
         text: '堆叠区域图',
         textStyle:{
-            fontSize:'3rem',
+            fontSize:12,
         }
     },
     tooltip : {
@@ -79,7 +79,7 @@ var option1 = {
         itemWidth:10,
         itemHeight:8,
         textStyle:{
-            fontSize:'5rem',
+            fontSize:8,
         },
         data:['邮件营销','视频广告','直接访问','搜索引擎']
     },
@@ -100,7 +100,7 @@ var option1 = {
         {
             type : 'category',
             nameTextStyle:{
-                fontSize:10,
+                fontSize:8,
             },
             boundaryGap : false,
             data : ['周一','周二','周三','周四','周五','周六','周日']
