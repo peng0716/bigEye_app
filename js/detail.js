@@ -58,7 +58,7 @@ $(function(){
 
 
 /*折线图*/
-var legendLine = echarts.init(document.getElementById('legendLine'));
+var legendLine = echarts.init(document.getElementById('legendLine'),'infographic');
 legendLine.showLoading({
     text:'正在努力加载中...'
 })
@@ -166,7 +166,7 @@ legendLine.setOption(option1);
 legendLine.hideLoading();
 
 /*柱状图 - 饼图*/
-var legendBar = echarts.init(document.getElementById('legendBar'));
+var legendBar = echarts.init(document.getElementById('legendBar'),'infographic');
 legendBar.showLoading({
     text:'正在努力加载中...'
 })
