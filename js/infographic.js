@@ -32,7 +32,7 @@
         title: {
             textStyle: {
                 fontWeight: 'normal',
-                color: '#27727B'
+                color: '#333'
             }
         },
 
@@ -74,7 +74,7 @@
         categoryAxis: {
             axisLine: {
                 lineStyle: {
-                    color: '#27727B'
+                    color: '#333'
                 }
             },
             splitLine: {
