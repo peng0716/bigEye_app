@@ -57,7 +57,7 @@ $(function(){
 });
 
 /*饼图*/
-var myPie = echarts.init(document.getElementById('myPie'));
+var myPie = echarts.init(document.getElementById('myPie'),'infographic');
 var option = {
     tooltip: {
         trigger: 'item',
