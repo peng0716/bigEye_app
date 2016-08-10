@@ -8,124 +8,152 @@
     <link rel="stylesheet" href="css/detail.css"/>
 </head>
 <body>
-<div class="detail">
-    <div class="detailFilter">
-        <ul>
-            <li class="floatLeft filter borderRight">
-                <span class="filter_text">时 间</span>
-                <img class="triangle_img" src="img/triangle_under.png" width="12" height="8" alt=""/>
-                <ul class="filterNav" style="display: none">
-                    <li>近三个月</li>
-                    <li>近半年</li>
-                </ul>
-            </li>
-            <li class="floatLeft filter">
-                <span class="filter_text">类 型</span>
-                <img class="triangle_img" src="img/triangle_under.png" width="12" height="8" alt=""/>
-                <ul class="filterNav" style="display: none">
-                    <li>近三个月</li>
-                    <li>近半年</li>
-                </ul>
-            </li>
-        </ul>
+    <div class="detail">
+        <div class="detailFilter">
+            <ul>
+                <li class="floatLeft filter borderRight">
+                    <span class="filter_text">时 间</span>
+                    <img class="triangle_img" src="img/triangle_under.png" width="12" height="8" alt=""/>
+                    <ul class="filterNav" style="display: none">
+                        <li>近三个月</li>
+                        <li>近半年</li>
+                    </ul>
+                </li>
+                <li class="floatLeft filter">
+                    <span class="filter_text">类 型</span>
+                    <img class="triangle_img" src="img/triangle_under.png" width="12" height="8" alt=""/>
+                    <ul class="filterNav" style="display: none">
+                        <li>近三个月</li>
+                        <li>近半年</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="detailLayout">
+            <!--图例-饼图-->
+            <div class="detailLegend">
+                <div class="legendTop">
+                    <h2 class="floatLeft legendTitle">饼图展示</h2>
+                    <p class="floatright full_screen">全屏模式</p>
+                </div>
+                <div>
+                    <div class="legendFilter">
+                        <div class="floatLeft partialFilter">
+                            <span class=" floatLeft condition">筛选1</span>
+                            <div class="floatLeft pc-box filterStyle">
+                                <p class="filterP" data-index="data1" data-default="10004">数据筛选</p>
+                                <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                            </div>
+                        </div>
+                        <div class="floatLeft partialFilter">
+                            <span class="floatLeft condition">筛选2</span>
+                            <div class=" floatLeft pc-box filterStyle">
+                                <p class="filterP" data-index="data2" data-default="10004">数据筛选</p>
+                                <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                            </div>
+                        </div>
+                        <button type="button" class="partialButton">确 定</button>
+                    </div>
+                    <div class="mypie" data-index="0"></div>
+                </div>
+            </div>
+            <!--图例-折线图-->
+            <div class="detailLegend">
+                <div class="legendTop">
+                    <h2 class="floatLeft legendTitle">折线图展示</h2>
+                    <p class="floatright full_screen">全屏模式</p>
+                </div>
+                <div>
+                    <div class="legendFilter">
+                        <div class="floatLeft partialFilter">
+                            <span class=" floatLeft condition">筛选1</span>
+                            <div class="floatLeft pc-box filterStyle">
+                                <p class="filterP" data-index="data1" data-default="10004">数据筛选</p>
+                                <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                            </div>
+                        </div>
+                        <div class="floatLeft partialFilter">
+                            <span class="floatLeft condition">筛选2</span>
+                            <div class=" floatLeft pc-box filterStyle">
+                                <p class="filterP" data-index="data2" data-default="10004">数据筛选</p>
+                                <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                            </div>
+                        </div>
+                        <button type="button" class="partialButton">确 定</button>
+                    </div>
+                    <div class="legendLine" data-index="1"></div>
+                </div>
+            </div>
+            <!--图例-柱状图和饼图-->
+            <div class="detailLegend">
+                <div class="legendTop">
+                    <h2 class="floatLeft legendTitle">柱状图展示</h2>
+                    <p class="floatright full_screen">全屏模式</p>
+                </div>
+                <div>
+                    <div class="legendFilter">
+                        <div class="floatLeft partialFilter">
+                            <span class=" floatLeft condition">条件1</span>
+                            <div class="floatLeft pc-box filterStyle">
+                                <p class="filterP" data-index="data3" data-default="10007">数据筛选</p>
+                                <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                            </div>
+                        </div>
+                        <div class="floatLeft partialFilter">
+                            <span class="floatLeft condition">条件2</span>
+                            <div class=" floatLeft pc-box filterStyle">
+                                <p class="filterP" data-index="data4" data-default="10008">数据筛选</p>
+                                <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                            </div>
+                        </div>
+                        <button type="button" class="partialButton">确 定</button>
+                    </div>
+                    <div class="legendBar" data-index="2"></div>
+                </div>
+            </div>
+            <!--图例中国地图-->
+            <div class="detailLegend">
+                <div class="legendTop">
+                    <h2 class="floatLeft legendTitle">地图展示</h2>
+                    <p class="floatright full_screen">全屏模式</p>
+                </div>
+                <div>
+                    <div class="legendFilter">
+                        <div class="floatLeft partialFilter">
+                            <span class=" floatLeft condition">筛选1</span>
+                            <div class="floatLeft pc-box filterStyle">
+                                <p class="filterP" data-index="data5" data-default="10006">数据筛选</p>
+                                <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                            </div>
+                        </div>
+                        <div class="floatLeft partialFilter">
+                            <span class="floatLeft condition">筛选2</span>
+                            <div class=" floatLeft pc-box filterStyle">
+                                <p class="filterP" data-index="data6" data-default="10007">数据筛选</p>
+                                <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
+                            </div>
+                        </div>
+                        <button type="button" class="partialButton">确 定</button>
+                    </div>
+                    <div class="legendMap" data-index="3"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="detailLayout">
-        <!--图例-饼图-->
-        <div class="detailLegend">
-            <h2 class="legendTitle">饼图展示</h2>
-            <div class="legendFilter">
-                <div class="floatLeft partialFilter">
-                    <span class=" floatLeft condition">筛选1</span>
-                    <div class="floatLeft pc-box filterStyle">
-                        <p class="filterP" data-index="data1" data-default="10004">数据筛选</p>
-                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
-                    </div>
-                </div>
-                <div class="floatLeft partialFilter">
-                    <span class="floatLeft condition">筛选2</span>
-                    <div class=" floatLeft pc-box filterStyle">
-                        <p class="filterP" data-index="data2" data-default="10004">数据筛选</p>
-                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
-                    </div>
-                </div>
-                <button type="button" class="partialButton">确 定</button>
-            </div>
-            <div id="myPie" class="legendLine"></div>
+    <div class="filterBg" style="display:none"></div>
+    <!--点击全屏-->
+    <div class="full_screenBg" style="display: none">
+        <div class="screenTop">
+            <a href="javascript:;" class=" floatright closeA">×</a>
         </div>
-        <!--图例-折线图-->
-        <div class="detailLegend">
-            <h2 class="legendTitle">折线图展示</h2>
-            <div class="legendFilter">
-                <div class="floatLeft partialFilter">
-                    <span class=" floatLeft condition">筛选1</span>
-                    <div class="floatLeft pc-box filterStyle">
-                        <p class="filterP" data-index="data1" data-default="10004">数据筛选</p>
-                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
-                    </div>
-                </div>
-                <div class="floatLeft partialFilter">
-                    <span class="floatLeft condition">筛选2</span>
-                    <div class=" floatLeft pc-box filterStyle">
-                        <p class="filterP" data-index="data2" data-default="10004">数据筛选</p>
-                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
-                    </div>
-                </div>
-                <button type="button" class="partialButton">确 定</button>
-            </div>
-            <div id="legendLine" class="legendLine"></div>
-        </div>
-        <!--图例-柱状图和饼图-->
-        <div class="detailLegend">
-            <h2 class="legendTitle">柱状图展示</h2>
-            <div class="legendFilter">
-                <div class="floatLeft partialFilter">
-                    <span class=" floatLeft condition">条件1</span>
-                    <div class="floatLeft pc-box filterStyle">
-                        <p class="filterP" data-index="data3" data-default="10007">数据筛选</p>
-                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
-                    </div>
-                </div>
-                <div class="floatLeft partialFilter">
-                    <span class="floatLeft condition">条件2</span>
-                    <div class=" floatLeft pc-box filterStyle">
-                        <p class="filterP" data-index="data4" data-default="10008">数据筛选</p>
-                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
-                    </div>
-                </div>
-                <button type="button" class="partialButton">确 定</button>
-            </div>
-            <div id="legendBar" class="legendLine legendBar"></div>
-        </div>
-        <!--图例中国地图-->
-        <div class="detailLegend">
-            <h2 class="legendTitle">地图展示</h2>
-            <div class="legendFilter">
-                <div class="floatLeft partialFilter">
-                    <span class=" floatLeft condition">筛选1</span>
-                    <div class="floatLeft pc-box filterStyle">
-                        <p class="filterP" data-index="data5" data-default="10002">数据筛选</p>
-                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
-                    </div>
-                </div>
-                <div class="floatLeft partialFilter">
-                    <span class="floatLeft condition">筛选2</span>
-                    <div class=" floatLeft pc-box filterStyle">
-                        <p class="filterP" data-index="data6" data-default="10003">数据筛选</p>
-                        <img class="filterImg" src="img/triangle_under.png" width="12" height="7" />
-                    </div>
-                </div>
-                <button type="button" class="partialButton">确 定</button>
-            </div>
-            <div id="myChart" class="legendLine legendMap"></div>
-        </div>
+        <div class="screen_content"></div>
     </div>
-</div>
-<div class="filterBg" style="display:none"></div>
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/iosSelect.js"></script>
-<script type="text/javascript" src="js/echarts.js"></script>
-<script type="text/javascript" src="js/infographic.js"></script>
-<script type="text/javascript" src="js/data.js"></script>
-<script type="text/javascript" src="js/detail.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/iosSelect.js"></script>
+    <script type="text/javascript" src="js/echarts.js"></script>
+    <script type="text/javascript" src="js/china.js"></script>
+    <script type="text/javascript" src="js/infographic.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/detail.js"></script>
 </body>
 </html>
