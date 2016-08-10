@@ -957,8 +957,7 @@ $(function(){
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0],'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
         }
-        window.addEventListener("orientationchange", function() {
-            /*location.reload();*/
+        $(window).on("orientationchange", function() {
             h.css('height',chartH());
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0],'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
