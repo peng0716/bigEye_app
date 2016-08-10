@@ -639,7 +639,7 @@ function renderBrushed(params) {
 
 
 $(function(){
-    $(window).on("orientationchange", function() {   //window.addEventListener
+    window.addEventListener("orientationchange", function() {   //window.addEventListener
         if($('.full_screenBg').css('display') == 'none'){
             location.reload();
         }
@@ -957,7 +957,7 @@ $(function(){
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0],'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
         }
-        $(window).on("orientationchange", function() {
+        window.addEventListener("orientationchange", function() {
             h.css('height',chartH());
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0],'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
