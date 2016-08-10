@@ -639,7 +639,7 @@ function renderBrushed(params) {
 
 
 $(function(){
-    window.addEventListener("orientationchange", function() {
+    $(window).on("orientationchange", function() {   //window.addEventListener
         if($('.full_screenBg').css('display') == 'none'){
             location.reload();
         }
