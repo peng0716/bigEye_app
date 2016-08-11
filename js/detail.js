@@ -642,7 +642,7 @@ function renderBrushed(params) {
 
 $(function () {
     /*页面 - 横屏竖屏刷新*/
-    window.addEventListener("onorientationchange" in window ? 'orientationchange' : 'resize', function () {   //window.addEventListener
+    $(window).on("orientationchange", function () {   //window.addEventListener
         if ($('.full_screenBg').css('display') == 'none') {
             location.reload();
         }
@@ -715,15 +715,9 @@ $(function () {
             return screenH;
         }
         /*初始化横屏竖屏*/
-        /*if (orientChk == 'landscape') {
-            h.css('height', chartH());
-            var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
-            viewInit.setOption(eval('viewoption' + viewIndex));
-        } else {*/
-            h.css('height', chartH());
-            var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
-            viewInit.setOption(eval('viewoption' + viewIndex));
-        /*}*/
+        h.css('height', chartH());
+        var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
+        viewInit.setOption(eval('viewoption' + viewIndex));
         /*mapTime初始化地图选中*/
         function mapTime() {
             viewInit.dispatchAction({
@@ -738,7 +732,7 @@ $(function () {
             });
         }
         /*全屏 - 横屏竖屏判断*/
-        window.addEventListener("onorientationchange" in window ? 'orientationchange' : 'resize', function () {
+        window.addEventListener("orientationchange", function () {
             h.css('height', chartH());
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
