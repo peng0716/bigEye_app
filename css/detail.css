@@ -189,13 +189,15 @@ a{
 }
 .screenTop{
     height: 24px;
+    background-color:#eee;
 }
 .closeA{
     color: #999;
     padding: 5px;
-    font: bold 14px/14px simsun;
+    font: bold 18px/14px simsun;
     text-shadow: 0 1px 0 #ddd;
 }
 .screen_content{
     padding:15px;
+    padding-top:0;
 }
