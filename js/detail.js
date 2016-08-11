@@ -642,9 +642,10 @@ function renderBrushed(params) {
 
 $(function () {
     /*页面 - 横屏竖屏刷新*/
-    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {   //window.addEventListener
+    window.addEventListener("orientationchange", function () {   //window.addEventListener
         /*if($('.full_screenBg').css('display') == 'none') {*/
-            location.reload();
+        location.reload();
+        location.replace(location)
         /*}*/
     });
     /*全局筛选*/
