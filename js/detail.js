@@ -643,10 +643,9 @@ function renderBrushed(params) {
 $(function () {
     /*页面 - 横屏竖屏刷新*/
     window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {   //window.addEventListener
-        if ($('.full_screenBg').css('display') == 'none') {
-            history.go(0);
+        /*if($('.full_screenBg').css('display') == 'none') {*/
             location.reload();
-        }
+        /*}*/
     });
     /*全局筛选*/
     $('.filter').on('touchstart', function () {
