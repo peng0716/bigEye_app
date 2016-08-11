@@ -642,7 +642,7 @@ function renderBrushed(params) {
 
 $(function () {
     /*页面 - 横屏竖屏刷新*/
-    $(window).on("orientationchange", function () {   //window.addEventListener
+    window.addEventListener("orientationchange", function () {   //window.addEventListener
         if ($('.full_screenBg').css('display') == 'none') {
             location.reload();
         }
@@ -707,7 +707,6 @@ $(function () {
         var h = $('.screen_content > div').children('div:last');
         var currentClass = h.attr('class');
         var viewIndex = h.attr('data-index');
-
         /*图表高度*/
         function chartH() {
             var legendFilterH = $('.screen_content > div').children().eq(0).outerHeight(true);
@@ -763,10 +762,7 @@ $(function () {
     $('.closeA').on('touchstart', function () {
         $(this).parent().next('div').children().remove();
         $('.full_screenBg').css('display', 'none');
-        /*判断关闭时是否横屏*/
-        if(document.documentElement.clientWidth > document.documentElement.clientHeight){
-            location.reload();
-        }
+        location.reload();
     });
 });
 
