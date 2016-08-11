@@ -642,7 +642,7 @@ function renderBrushed(params) {
 
 $(function () {
     /*页面 - 横屏竖屏刷新*/
-    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function (e) {   //window.addEventListener
+    window.addEventListener("orientationchange", function () {   //window.addEventListener
         if($('.full_screenBg').css('display') == 'none') {
             location.reload();
         }
@@ -731,7 +731,7 @@ $(function () {
             });
         }
         /*全屏 - 横屏竖屏判断*/
-        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function (e) {
+        window.addEventListener("orientationchange", function () {
             h.css('height', chartH());
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
