@@ -271,7 +271,7 @@ var viewoption2 = {
                 nameTextStyle: {
                     fontSize: 8,
                 },
-                max: 30000
+                max: 20000
             }
         ],
         series: [
@@ -641,8 +641,8 @@ function renderBrushed(params) {
 
 
 $(function () {
-    /*页面横屏竖屏刷新*/
-    window.addEventListener("orientationchange", function () {   //window.addEventListener
+    /*页面 - 横屏竖屏刷新*/
+    window.addEventListener("onorientationchange" in window ? 'orientationchange' : 'resize', function () {   //window.addEventListener
         if ($('.full_screenBg').css('display') == 'none') {
             location.reload();
         }
@@ -700,7 +700,7 @@ $(function () {
     /*全屏模式*/
     $('.full_screen').on('touchstart', function () {
         $('.full_screenBg').css('display', 'block');
-        var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight ? 'landscape' : 'portrait';
+        /*var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight ? 'landscape' : 'portrait';*/
         $(this).parent().next().clone(true).appendTo('.screen_content');
         /*var content = $(this).parent().next();
         $('.screen_content').append(content);*/
@@ -715,15 +715,15 @@ $(function () {
             return screenH;
         }
         /*初始化横屏竖屏*/
-        if (orientChk == 'landscape') {
+        /*if (orientChk == 'landscape') {
             h.css('height', chartH());
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
-        } else {
+        } else {*/
             h.css('height', chartH());
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
-        }
+        /*}*/
         /*mapTime初始化地图选中*/
         function mapTime() {
             viewInit.dispatchAction({
@@ -737,8 +737,8 @@ $(function () {
                 ]
             });
         }
-        /*横屏竖屏判断*/
-        window.addEventListener("orientationchange", function () {
+        /*全屏 - 横屏竖屏判断*/
+        window.addEventListener("onorientationchange" in window ? 'orientationchange' : 'resize', function () {
             h.css('height', chartH());
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
