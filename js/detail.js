@@ -678,7 +678,7 @@ $(function () {
             var bankSelect = new IosSelect(1,
                 [dataXQ[dataIndex]],
                 {
-                    itemHeight: 50,
+                    itemHeight: 34,
                     oneLevelId: oneLevelId,
                     callback: function (selectOneObj) {
                         showBankDom.context.value = selectOneObj.value;
@@ -690,10 +690,10 @@ $(function () {
                 }
             );
             //横屏处理
-            var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight ? 'landscape' : 'portrait';
+            /*var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight ? 'landscape' : 'portrait';
             if (orientChk == 'landscape') {
                 $('.layer').css('height', '100%');
-            }
+            }*/
             $('#iosSelectTitle').text(titleText);
         })
     });
