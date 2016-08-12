@@ -761,10 +761,23 @@ $(function () {
         };
     })
     /*关闭全屏*/
-    $('.closeA').on('touchstart', function () {
+    /*$('.closeA').on('touchstart', function () {
         $(this).parent().next('div').children().remove();
         $('.full_screenBg').css('display', 'none');
         location.reload();
+    });*/
+    var i = 0;
+    $('.screen_content').on('touchstart', function () {
+        i++;
+        setTimeout(function(){
+            i = 0;
+        },500);
+        if(i > 1){
+            $(this).children().remove();
+            $('.full_screenBg').css('display', 'none');
+            location.reload();
+        }
+
     });
 });
 
