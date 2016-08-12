@@ -416,21 +416,21 @@ var viewoption3 = {
     title: [
         {
             text: '全国主要城市 PM 2.5',
-            subtext: 'data from PM25.in',
             sublink: 'http://www.pm25.in',
             left: 'center',
             textStyle: {
-                color: '#fff'
+                color: '#fff',
+                fontSize:12
             }
         },
         {
             id: 'statistic',
-            right: 120,
-            top: 40,
+            right: '20%',
+            top: 50,
             width: 100,
             textStyle: {
                 color: '#fff',
-                fontSize: 16
+                fontSize: 14
             }
         }
     ],
@@ -461,15 +461,15 @@ var viewoption3 = {
     geo: {
         map: 'china',
         left: '10',
-        right: '35%',
+        right: '30%',
         center: [117.98561551896913, 31.205000490896193],
-        zoom: 2.5,
+        zoom: 3,
         label: {
             emphasis: {
                 show: false
             }
         },
-        roam: true,
+        roam: 'move',
         itemStyle: {
             normal: {
                 areaColor: '#323c48',
