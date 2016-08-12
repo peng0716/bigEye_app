@@ -701,7 +701,7 @@ $(function () {
     $('.full_screen').on('touchstart', function () {
         $('.full_screenBg').css('display', 'block');
         /*var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight ? 'landscape' : 'portrait';*/
-        $(this).parent().next().clone(true).appendTo('.screen_content');
+        $(this).parent().next().clone(true).appendTo('.screen_content');   //复制
         /*var content = $(this).parent().next();
         $('.screen_content').append(content);*/
         var heightH = $('.screen_content > div').children('div:last');
