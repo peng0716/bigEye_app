@@ -67,7 +67,7 @@ var viewoption0 = {
 myPie.setOption(viewoption0);
 
 /*折线图*/
-/*var legendLine = echarts.init(document.querySelector('.legendLine'), 'infographic');
+var legendLine = echarts.init(document.querySelector('.legendLine'), 'infographic');
 legendLine.showLoading({
     text: '正在努力加载中...'
 })
@@ -175,7 +175,7 @@ legendLine.setOption(viewoption1);
 legendLine.hideLoading();
 
 
-/!*柱状图 - 饼图*!/
+/*柱状图 - 饼图*/
 var legendBar = echarts.init(document.querySelector('.legendBar'), 'infographic');
 legendBar.showLoading({
     text: '正在努力加载中...'
@@ -404,7 +404,7 @@ var viewoption2 = {
 legendBar.setOption(viewoption2);
 legendBar.hideLoading();
 
-/!*中国地图*!/
+/*中国地图*/
 var myChart = echarts.init(document.querySelector('.legendMap'));
 var viewoption3 = {
     backgroundColor: '#404a59',
@@ -636,7 +636,7 @@ function renderBrushed(params) {
             data: barData
         }
     });
-}*/
+}
 
 
 
