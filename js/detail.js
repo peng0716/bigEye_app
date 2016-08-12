@@ -639,23 +639,14 @@ function renderBrushed(params) {
 }*/
 
 
-function orient() {
-    if (window.orientation == 0 || window.orientation == 180) {
-        $("body").attr("class", "portrait");
-        orientation = 'portrait';
-        return false;
-    }
-    else if (window.orientation == 90 || window.orientation == -90) {
-        $("body").attr("class", "landscape");
-        orientation = 'landscape';
-        return false;
-    }
-}
+
+
 $(function () {
     /*页面 - 横屏竖屏刷新*/
-    orient();
     $(window).bind( 'orientationchange', function(e){
-        orient();
+        if($('.full_screenBg').css('display') == 'none') {
+            location.reload();
+        }
     });
     /*window.addEventListener("orientationchange", function () {   //window.addEventListener
         if($('.full_screenBg').css('display') == 'none') {
@@ -747,7 +738,8 @@ $(function () {
             });
         }
         /*全屏 - 横屏竖屏判断*/
-        window.addEventListener("orientationchange", function () {
+        $(window).bind( 'orientationchange', function(e){
+        /*window.addEventListener("orientationchange", function () {*/
             heightH.css('height', chartH());
             heightH.css('width','100%');
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
