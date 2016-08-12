@@ -704,9 +704,9 @@ $(function () {
         $(this).parent().next().clone(true).appendTo('.screen_content');
         /*var content = $(this).parent().next();
         $('.screen_content').append(content);*/
-        var $h = $('.screen_content > div').children('div:last');
-        var currentClass = $h.attr('class');
-        var viewIndex = $h.attr('data-index');
+        var heightH = $('.screen_content > div').children('div:last');
+        var currentClass = heightH.attr('class');
+        var viewIndex = heightH.attr('data-index');
         /*图表高度*/
         function chartH() {
             var legendFilterH = $('.screen_content > div').children().eq(0).outerHeight(true);
@@ -714,8 +714,8 @@ $(function () {
             return screenH;
         }
         /*初始化横屏竖屏*/
-        $h.css('height', chartH());
-        $h.css('width','100%');
+        heightH.css('height', chartH());
+        heightH.css('width','100%');
         var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
         viewInit.setOption(eval('viewoption' + viewIndex));
         /*mapTime初始化地图选中*/
@@ -733,8 +733,8 @@ $(function () {
         }
         /*全屏 - 横屏竖屏判断*/
         window.addEventListener("orientationchange", function () {
-            $h.css('height', chartH());
-            $h.css('width','100%');
+            heightH.css('height', chartH());
+            heightH.css('width','100%');
             var viewInit = echarts.init($('.screen_content').find('.' + currentClass)[0], 'infographic');
             viewInit.setOption(eval('viewoption' + viewIndex));
             /*地图事件判断*/
